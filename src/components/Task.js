@@ -27,11 +27,11 @@ const Task = ({ task, onDelete, onToggle, onEdit }) => {
           <span onClick={onToggle} className="flex-grow-1" style={{ textDecoration: task.completed ? 'line-through' : 'none', cursor: 'pointer' }}>
             {task.text}
           </span>
-          <div>
-            <button className={`btn btn-sm ${task.completed ? 'btn-secondary' : 'btn-success'} mr-2`} onClick={onToggle}>
+          <div className="d-flex flex-column flex-sm-row">
+            <button className={`btn btn-sm ${task.completed ? 'btn-secondary' : 'btn-success'} mb-2 mb-sm-0 mr-sm-2`} onClick={onToggle}>
               {task.completed ? 'Unmark' : 'Mark Completed'}
             </button>
-            <button className="btn btn-sm btn-warning mr-2" onClick={() => setIsEditing(true)}>Edit</button>
+            <button className="btn btn-sm btn-warning mb-2 mb-sm-0 mr-sm-2" onClick={() => setIsEditing(true)}>Edit</button>
             <button className="btn btn-sm btn-danger" onClick={onDelete}>Delete</button>
           </div>
         </>
