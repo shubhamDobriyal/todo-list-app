@@ -5,6 +5,7 @@ const Task = ({ task, onDelete, onToggle, onEdit }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [newTask, setNewTask] = useState(task.text);
 
+   // Handle the edit action
   const handleEdit = () => {
     onEdit(newTask);
     setIsEditing(false);

@@ -5,7 +5,7 @@ import { deleteTask, toggleComplete, editTask } from '../features/tasksSlice';
 import Task from './Task';
 
 const TaskList = () => {
-  const tasks = useSelector((state) => state.tasks);
+  const tasks = useSelector((state) => state.tasks); // Get tasks from Redux store
   const dispatch = useDispatch();
 
   return (

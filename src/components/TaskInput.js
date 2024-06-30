@@ -7,6 +7,7 @@ const TaskInput = () => {
   const [task, setTask] = useState('');
   const dispatch = useDispatch();
 
+  // Handle adding a new task
   const handleAddTask = () => {
     if (task.trim()) {
       dispatch(addTask(task));
